@@ -178,15 +178,17 @@ const animationTimeline = () => {
     )
     .staggerFrom(
     ".baloons img", 
-    1, 
+    0.8, // Giảm thời gian animation
     {
         opacity: 0,
-        scale: 0,
-        y: 80,
-        rotation: 180,
-        ease: "back.out(1.7)",
+        scale: 0.3,
+        y: 30,
+        rotation: 90,
+        ease: "back.out(1.4)", // Điều chỉnh ease
+        force3D: true, // Cải thiện performance
+        transformOrigin: "center center"
     },
-    0.3 // Thời gian giãn cách giữa mỗi ảnh
+    0.2 // Giảm thời gian delay giữa các ảnh
 )
     .from(
         ".profile-picture",

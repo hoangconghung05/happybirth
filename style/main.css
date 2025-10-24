@@ -295,3 +295,29 @@ body {
     font-weight: lighter;
   }
 }
+/* Thêm vào cuối file */
+/* Optimize animations for mobile */
+@media (max-width: 768px) {
+  .container {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .baloons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .baloons img {
+    width: 100%;
+    height: auto;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+  }
+}
