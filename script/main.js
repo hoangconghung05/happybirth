@@ -176,17 +176,18 @@ const animationTimeline = () => {
         0.2,
         "+=1.5"
     )
-    .staggerFromTo(
-        ".baloons img",
-        2.5, {
-            opacity: 0.9,
-            y: 1400,
-        }, {
-            opacity: 1,
-            y: -1000,
-        },
-        0.2
-    )
+    .staggerFrom(
+    ".baloons img", 
+    1, 
+    {
+        opacity: 0,
+        scale: 0,
+        y: 80,
+        rotation: 180,
+        ease: "back.out(1.7)",
+    },
+    0.3 // Thời gian giãn cách giữa mỗi ảnh
+)
     .from(
         ".profile-picture",
         0.5, {
