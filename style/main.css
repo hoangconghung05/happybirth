@@ -119,21 +119,23 @@ body {
   width: 80px;
 }
 
+.baloons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .baloons img {
-  display: inline-block;
-  position: absolute;
-}
-
-.baloons img:nth-child(even) {
-  left: -10%;
-}
-
-.baloons img:nth-child(odd) {
-  right: -10%;
-}
-
-.baloons img:nth-child(3n + 0) {
-  left: 30%;
+    position: relative; /* Thay vì absolute */
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
 }
 
 .seven, .eight {
